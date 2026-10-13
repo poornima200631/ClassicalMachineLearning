@@ -10,7 +10,7 @@ class MyLinearRegression:
         beta = np.linalg.lstsq(xb, Y, rcond=None)[0]
         self.intercept = beta[0]
         self.coefficients = beta[1:]
-        
+    
     def predict(self,X):
         y_pred=self.intercept+X @ self.coefficients
         return y_pred
